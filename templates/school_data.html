@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School_Data</title>
+    <style>
+        table
+        {
+            border-collapse: collapse;
+        }
+        th
+        {
+            background-color: black;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1><u>SCHOOL_DATA</u></h1>
+        <table border="5px" cellpadding="5px" cellspacing="5px">
+            <tr>
+                <th>SCHOOL_NAME</th>
+                <th>PRINCIPAL_NAME</th>
+                <th>SCHOOL_LOCATION</th>
+            </tr>
+            {% for s in schools %}
+                <tr>
+                    <td>{{s.Sname}}</td>
+                    <td>{{s.Sprincipal}}</td>
+                    <td>{{s.Slocation}}</td>
+                </tr>
+            {% endfor %}
+
+        </table>
+    </center>
+</body>
+</html>
